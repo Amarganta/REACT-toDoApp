@@ -15,7 +15,7 @@ const Login = () => {
         <div className="login">
           <Row className="justify-content-center">
             <div className="col-lg-5">
-              <Card>
+              <Card className="shadow">
                 <div className="card-header pt-4 pb-4 text-center color">
                   <img src={Logo} alt="ADA admin logo" height="50" />
                 </div>
