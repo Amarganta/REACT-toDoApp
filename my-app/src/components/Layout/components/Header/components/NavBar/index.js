@@ -5,11 +5,12 @@ import { Grid3x3GapFill } from "react-bootstrap-icons";
 import { Gear } from "react-bootstrap-icons";
 import { useHistory } from "react-router-dom";
 import avatar from "../../../../../../assets/img/avatar-1.jpg";
-import menuItems from "./data";
+import { useTranslation } from "react-i18next";
+// import menuItems from "./data";
 
 const NavBar = () => {
   const { goBack } = useHistory();
-
+  const [t, i18n] = useTranslation("global");
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid">
@@ -34,7 +35,7 @@ const NavBar = () => {
                 aria-describedby="basic-addon1"
               />
               <button className="btn btn-primary shadow" type="submit">
-                Search
+                {t("navbar.Search")}
               </button>
             </div>
 
@@ -60,16 +61,25 @@ const NavBar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                English
+                Languages
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                {menuItems.map(({ href, text, className }) => {
-                  return (
-                    <li key={text} className={`dropdown-item ${className}`}>
-                      <a href={href}>{text}</a>
-                    </li>
-                  );
-                })}
+                <li className="dropdown-item">
+                  <a
+                    onClick={() => i18n.changeLanguage("es")}
+                    href="#/action-2"
+                  >
+                    Spanish
+                  </a>
+                </li>
+                <li className="dropdown-item">
+                  <a
+                    onClick={() => i18n.changeLanguage("en")}
+                    href="#/action-1"
+                  >
+                    English
+                  </a>
+                </li>
               </ul>
             </li>
             <li className="nav-item">
