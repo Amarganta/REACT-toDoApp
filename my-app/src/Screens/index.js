@@ -1,4 +1,5 @@
 export { Ejemplo } from "./Ejemplo";
-export { AgregarTareas } from "./AgregarTareas";
-export { Tareas } from "./Tareas";
-export { AgregarUsuarios } from "./AgregarUsuarios";
+export { AddTask } from "./AddTask";
+export { Task } from "./Task";
+export { AddUser } from "./AddUser";
+export { Login } from "./Login";
