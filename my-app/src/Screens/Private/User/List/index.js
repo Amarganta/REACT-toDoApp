@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { api } from "../../utilities";
+import { api } from "../../../../utilities";
 import { useTranslation } from "react-i18next";
-import { Layout, Main } from "../../components";
-import { objectToArray } from "../../helpers";
+import { Layout, Main } from "../../../../components";
+import { objectToArray } from "../../../../helpers";
 import { TableUsers } from "./components";
 import Table from "react-bootstrap/Table";
 import Container from "react-bootstrap/Container";
 
-const User = () => {
+const List = () => {
   const [t] = useTranslation("global");
   const [users, setUsers] = useState([]);
 
@@ -28,7 +28,7 @@ const User = () => {
     <Layout>
       <Main
         showButton={true}
-        title={t("main.titleUser")}
+        titulo={t("main.titleUser")}
         txt={t("main.btnuser")}
         link={"/addUsers"}
         className={"bg-light main"}
@@ -60,4 +60,4 @@ const User = () => {
   );
 };
 
-export { User };
+export { List };

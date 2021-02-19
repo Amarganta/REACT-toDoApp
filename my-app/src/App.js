@@ -1,19 +1,8 @@
-import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Ejemplo, AddTask, Task, Login, AddUsersForm, User } from "./Screens";
+import { Private } from "./Screens/Private";
+import { Public } from "./Screens/Public";
 const App = () => {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/ejemplo" component={Ejemplo} />
-        <Route path="/task" component={Task} />
-        <Route path="/addtask" component={AddTask} />
-        <Route path="/adduser" component={AddUsersForm} />
-        <Route path="/login" component={Login} />
-        <Route path="/user" component={User} />
-      </Switch>
-    </Router>
-  );
+  const isAuthenticated = true;
+  return isAuthenticated ? <Private /> : <Public />;
 };
 
 export default App;

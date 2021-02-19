@@ -1,6 +1,6 @@
 import React from "react";
-import { Layout, Main } from "../../components";
-import Logo from "../../assets/img/logo-fucsia.png";
+import { Layout, Main } from "../../../components";
+import Logo from "../../../assets/img/logo-fucsia.png";
 import Row from "react-bootstrap/Row";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";

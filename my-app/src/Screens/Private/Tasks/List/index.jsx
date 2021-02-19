@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Layout, Main } from "../../components";
-import { api } from "../../utilities";
-import { objectToArray } from "../../helpers";
+import { Layout, Main } from "../../../../components";
+import { api } from "../../../../utilities";
+import { objectToArray } from "../../../../helpers";
 import { Card } from "./components";
+import { useTranslation } from "react-i18next";
 import "./task.css";
-const Task = () => {
+const List = () => {
   const [tareas, setTareas] = useState([]);
 
   const traer = () => {
@@ -23,9 +24,10 @@ const Task = () => {
   useEffect(() => {
     traer();
   }, []);
+  const [t] = useTranslation("global");
   return (
     <Layout>
-      <Main showButtom={true} titulo="Proyectos">
+      <Main showButtom={true} title={t("main.titleTask")}>
         <div className="row row-cols-1 row-cols-md-3 g-4">
           {tareas.map(
             ({ titulo, descripcion, asignado, fecha, status, id }) => {
@@ -47,4 +49,4 @@ const Task = () => {
   );
 };
 
-export { Task };
+export { List };

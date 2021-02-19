@@ -1,5 +1,5 @@
 import React from "react";
-import { api } from "../../../../utilities";
+import { api } from "../../../../../../utilities";
 
 const TableUsers = ({ name, lastName, email, password, id }) => {
   api.patch(`/users/${id}.json`, {}).then((response) => {

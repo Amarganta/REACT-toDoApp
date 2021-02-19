@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Layout, Main } from "../../components";
-import { api } from "../../utilities";
-const AddTask = () => {
+import { Layout, Main } from "../../../../components";
+import { api } from "../../../../utilities";
+const Add = () => {
   const [titulo, setTitulo] = useState();
   const [fecha, setFecha] = useState();
   const [descripcion, setDescripcion] = useState();
@@ -26,7 +26,7 @@ const AddTask = () => {
 
   return (
     <Layout>
-      <Main titulo="Agregar nueva tarea">
+      <Main title="Agregar nueva tarea">
         <div>
           <form onSubmit={handleOnSubmit}>
             <input
@@ -68,4 +68,4 @@ const AddTask = () => {
   );
 };
 
-export { AddTask };
+export { Add };

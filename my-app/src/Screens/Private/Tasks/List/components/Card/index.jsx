@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { api } from "../../../../utilities";
+import { api } from "../../../../../../utilities";
 import "./card.css";
 const Card = ({ titulo, descripcion, asignado, fecha, status, id }) => {
   const [taskStatus, setTaskStatus] = useState(status);

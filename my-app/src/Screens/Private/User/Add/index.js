@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { api } from "../../utilities";
+import { api } from "../../../../utilities";
 import { useTranslation } from "react-i18next";
-import { Layout, Main } from "../../components";
+import { Layout, Main } from "../../../../components";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -14,14 +14,14 @@ const AddUsersForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    api.post("/users.json", {
-      name: name,
-      lastName: lastName,
-      email: email,
-      password: password,
-    });
-    let form = e.target;
-    form.reset();
+    api
+      .post("/users.json", {
+        name: name,
+        lastName: lastName,
+        email: email,
+        password: password,
+      })
+      .then(setName(""), setlastName(""), setEmail(""), setPassword(""));
   };
   const [t] = useTranslation("global");
 
