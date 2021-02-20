@@ -22,7 +22,7 @@ const Login = () => {
                 <Card.Body className="p-4">
                   <Card.Title className="text-center">
                     <h4 className="text-dark-50 mt-0 font-weight-bold">
-                      Sign In
+                      Log in
                     </h4>
                     <Card.Text className="text-muted mb-4">
                       Enter your email address and password to access.
