@@ -7,24 +7,8 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 import "./singin.css";
-import { firebaseConfig } from "../../../utilities/firebaseConfig";
-const handleOnSubmit = (e) => {
-  e.preventDefault();
-  firebaseConfig
-    .auth()
-    .createUserWithEmailAndPassword(email, password)
-    .then((user) => {
-      // Signed in
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage);
-      // ..
-    });
-};
+// import { firebaseConfig } from "../../../utilities/firebaseConfig";
+
 const SingIn = () => {
   return (
     <Layout hideHeader={true} hideAside={true}>
@@ -45,7 +29,11 @@ const SingIn = () => {
                       Enter your email address and password to access.
                     </Card.Text>
                   </Card.Title>
+<<<<<<< HEAD
                   <Form onSubmit={handleOnSubmit}>
+=======
+                  <Form>
+>>>>>>> 96c40e43c28bc249b1ea8a31c729e19eeffaabc4
                     <Form.Group>
                       <Form.Label>Fullname</Form.Label>
                       <Form.Control
